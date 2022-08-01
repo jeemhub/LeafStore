@@ -1,8 +1,16 @@
 import React from 'react'
 import homecoffe from '../assets/homephoto.jpg'
 import { Link } from "react-router-dom";
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion';
+
+
+//homecoffe
 function Home() {
+  
+    
+
+  
+    
     return (
         <motion.div 
         initial={{width:0}}
@@ -16,8 +24,11 @@ function Home() {
                 <h1 className='md:text-6xl text-4xl font-bold md:my-6 my-3'>ابدأ يومك بكوب قهوة</h1>
                 <p className='md:text-xl text-lg mb-5 md:mt-3 md:mb-6'>داكنة اللون صنعت لتمنح الصباح دلاله</p>
                 <button className='text-xl bg-orange-500 hover:drop-shadow-md font-bold text-white p-5 rounded-3xl hover:border-2 transition-all ease-in duration-100 hover:border-solid hover:border-orange-500 hover:bg-white hover:text-orange-500'><Link to="/Product">اطلب قهوتك الان</Link></button>
-            </div>
+         
 
+            </div>
+            
+        
         </motion.div>
     )
 }

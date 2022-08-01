@@ -8,6 +8,8 @@ import Home from './Home'
 import About from './About'
 import Product from './Product'
 import Contact from './Contact'
+import Req from './Req';
+import Send from './Send';
 import {AnimatePresence} from 'framer-motion'
 function AnmitedRoutes() {
   const location =useLocation();
@@ -18,6 +20,8 @@ function AnmitedRoutes() {
               <Route path='/About' element={<About/>}/>
               <Route path='/Product' element={<Product/>}/>
               <Route path='/Contact' element={<Contact/>}/>
+              <Route path='/Req' element={<Req/>}/>
+              <Route path='/Send' element={<Send/>}/>
            </Routes>
      </AnimatePresence>
   )

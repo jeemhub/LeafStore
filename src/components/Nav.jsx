@@ -1,12 +1,18 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
+import { useSelector, } from 'react-redux'
+
 function Nav() {
+    const count=useSelector((state)=>state.product.count)
     const [open, setopen] = useState(false);
+  //  const [after,setafter]=useState(0);
+   
     return (
-        <div className={`shadow-md w-full  top-0 left-0 ${open ? 'h-30px' : ''} flex flex-col items-start md:flex-row md:justify-between bg-white py-4 `}>
+        <div className={`shadow-md w-full sticky z-10 top-0 left-0 ${open ? 'h-30px' : ''} flex flex-col items-start md:flex-row md:justify-between bg-white py-4 `}>
                 <div className='font-bold  text-2xl cursor-pointer flex items-center  font-[poppind] px-3'>
-                    <span className='text-3xl pr-2 '><ion-icon  name="leaf-outline"></ion-icon></span>
+                    <div  className='bg-red-600 rounded-full text-white p-1 text-sm mb-5 translate-x-2 h-6'>{count}</div>
+                    <span className={`text-3xl pr-2  after:text-sm`}><Link to="/Req"> <ion-icon name="basket-outline"></ion-icon></Link></span>
                     Leaf Store
                 </div>
                 <ul className={`md:flex px-3 md:items-center top-20  ml-10 md:static transition-all  duration-500 ease-in opacity-0 md:opacity-100 

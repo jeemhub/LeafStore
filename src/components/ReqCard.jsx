@@ -1,5 +1,4 @@
 import React from 'react'
-
 import {
     Card,
     CardHeader,
@@ -7,26 +6,18 @@ import {
     CardFooter,
     Typography,
   } from "@material-tailwind/react";
-  import { useSelector, useDispatch } from 'react-redux'
-import { AddProduct } from '../Redux/productSlice'
-function Cards(props) {
-    const product = useSelector((state) => state)
-    const count=useSelector((state)=>state.product.count)
+  import { useDispatch } from 'react-redux'
+  import { RemoveProduct } from '../Redux/productSlice'
+function ReqCard(props) {
     const dispatch = useDispatch()
-    const add=(a,b,c,d)=>{
-        dispatch(AddProduct(
-            {
-                title:a,
-                p:b,
-                price:c,
-                img:d,
-            }
-            ));
-           
+    const remove=(pop)=>{
+        dispatch(RemoveProduct(pop));
     }
-    
-  return (
-    <>
+ 
+    return (
+
+    <div>
+        <>
         <Card className="w-56 m-4 h-80">
                     <CardHeader color="blue" className="relative h-36">
                         <img
@@ -46,14 +37,15 @@ function Cards(props) {
                     <CardFooter divider className="flex items-center justify-between p-2 ">
                         <Typography variant="h5"> {props.price}$</Typography>
                         <Typography variant="h5" color="gray" className="flex gap-1">
-                            <button onClick={()=>add(props.title, props.p , props.price , props.img)} className='bg-orange-500 text-white font-bold rounded-md m-2 p-1 mr-2'>اضافة الى السلة</button>
+                            <button onClick={()=>remove(props.title)} className='bg-red-500 text-white font-bold rounded-md m-2 p-1 mr-2'>حذف</button>
                         </Typography>
                     </CardFooter>
                 </Card>
 
                 
     </>
+    </div>
   )
 }
 
-export default Cards
+export default ReqCard
