@@ -30,7 +30,7 @@ function Cards(props) {
         <Card className="w-56 m-4 h-80">
                     <CardHeader color="blue" className="relative h-36">
                         <img
-                            src={props.img}
+                            src={`${props.img}`}
                             alt=""
                             className="h-full w-full"
                         />

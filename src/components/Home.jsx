@@ -17,8 +17,8 @@ function Home() {
         animate={{width:"100%"}}
         exit={{x:window.innerWidth,transition:{furation:0.1}}}
         className='w-full h-screen flex flex-col md:flex-row md:justify-between items-center md:px-10 py-10 md:-mt-20'>
-            <div className='md:w-3/12 w-8/12 mb-8 md:mb-0  md:ml-20 z-10 drop-shadow-2xl'>
-                <img src={homecoffe} alt="" className='rounded-xl z-30'/> 
+            <div className='md:w-3/12 w-8/12 mb-8 md:mb-0  md:ml-20  drop-shadow-2xl'>
+                <img src={homecoffe} alt="" className='rounded-xl '/> 
             </div>
             <div className='flex flex-col md:mr-20 items-center md:items-end'>
                 <h1 className='md:text-6xl text-4xl font-bold md:my-6 my-3'>ابدأ يومك بكوب قهوة</h1>
